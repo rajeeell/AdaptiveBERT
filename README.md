@@ -1,7 +1,6 @@
 # AdaptiveBERT |  Domain-Specific Fine-Tuning for Text Classification
 
-This repository showcases the fine-tuning of Google's DistilBERT model for classifying news articles into one of the following categories such as tech, business, politics, entertainment and sports. Included are the preprocessing data(learning.py) to train the model, and prediction scripts(predict.py) for the fine-tuned model. Please note that due to size limitations, the fine-tuned model itself is not included.
-
+This repository demonstrates the fine-tuning of Google's DistilBERT model for classifying news articles into categories such as **tech, business, politics, entertainment, and sports**. It includes **data preprocessing scripts (learning.py), model training, and prediction scripts (predict.py)**. Due to size constraints, the fine-tuned model itself is not included in the repository.
 
 
 ## Table of Contents
@@ -11,18 +10,16 @@ This repository showcases the fine-tuning of Google's DistilBERT model for class
 - [Data Preprocessing](#data-preprocessing)
 - [Usage](#usage)
 - [Model Fine-Tuning](#model-fine-tuning)
-- [Contributing](#contributing)
 
 ## Introduction
 
-News Classification with DistilBERT is a project that harnesses cutting-edge natural language processing (NLP) techniques to categorize news articles into predefined topics. This project relies on [Hugging Face Transformers](https://huggingface.co/transformers/) and [TensorFlow](https://www.tensorflow.org/) for its implementation.
+AdaptiveBERT is a project that harnesses cutting-edge natural language processing (NLP) techniques to categorize news articles into predefined topics. This project relies on [Hugging Face Transformers](https://huggingface.co/transformers/) and [TensorFlow](https://www.tensorflow.org/) for its implementation.
 
 ## Achieved Results
 
-1. Built a NLP Pipeline to train Google’s DistilBert Large Language Model using TensorFlow and Hugging Face transformers for multi class text classification.
-2. Fine-Tuned the model with a custom BBC text classification dataset.
-3. Used DistilBert to pertain 97% of language understanding of Bert Model while reducing the size by 40% and speeding up the training process by 60%.
-
+1. Developed an NLP pipeline to train Google’s DistilBERT model for multi-class text classification using TensorFlow and Hugging Face Transformers.  
+2. Fine-tuned the model on a custom BBC text classification dataset to enhance domain-specific accuracy.  
+3. Leveraged DistilBERT’s efficiency, achieving 97% of BERT’s language understanding while reducing model size by 40% and accelerating training by 60%.
 
 
 ## Getting Started
@@ -38,45 +35,37 @@ Install the required dependencies:
 pip install transformers tensorflow pandas scikit-learn
 
 ## Data Preprocessing
-Before using the model, you should preprocess your dataset. If you choose to use your own custom dataset, follow these steps:
+Before using the model, ensure your dataset is preprocessed. If you are working with a custom dataset, follow these steps:  
 
-1. Tokenize your dataset and assign labels to each news article.
+1. Tokenize the dataset and assign labels to each news article.
+     
+2. Convert the labels into a binary format to align with the model's requirements.
+   
+3. For a quick start, use the provided example dataset (BBC Text Classification) and follow the preprocessing steps outlined in the code.
+   
+4. Fine-tune the DistilBERT model on the preprocessed dataset.
+   
+5. Save the fine-tuned model in the **saved_models** directory, ensuring you have the necessary write permissions for your operating system.
 
-2. Convert labels to binary format, ensuring they are compatible with the model's requirements.
-
-3. For a quick start, you can use the provided example dataset (BBC Text Classification) and follow the preprocessing steps outlined in the code.
-
-4. Fine-tune the DistilBERT model on your preprocessed dataset.
-
-5. Save the fine-tuned model in the saved_models directory. (Make sure you have permissions to write in the current path of your OS)
-
+   
 ## Usage
 You can use the fine-tuned DistilBERT model to classify news articles. Run the following script and enter the news article text when prompted:
 
 bash
 Copy code
 python predict.py
-The script will classify the news article into one of the following categories: Business, Entertainment, Politics, Sport, Tech based on the given input.
+The script will categorize the news article into one of the following classifications based on the provided input: Business, Entertainment, Politics, Sport, or Tech.
 
 ## Model Fine-Tuning
-If you want to fine-tune the DistilBERT model on your own dataset, follow these steps:
+To fine-tune the DistilBERT model on your own dataset, follow these steps:  
 
-1. Prepare your dataset in a format similar to the example dataset (BBC Text Classification).
+1. Format your dataset similarly to the provided BBC Text Classification dataset.  
 
-2. Modify the code to load and preprocess your dataset.
+2. Update the code to load and preprocess your dataset accordingly.  
 
-3. Fine-tune the model using the TFTrainer.
+3. Use the TFTrainer to fine-tune the model.  
 
-4. Save the fine-tuned model in the saved_models directory.
+4. Save the fine-tuned model in the **saved_models** directory.
 
 ## Contributing
 Contributions to this project are welcome! If you encounter issues or have suggestions for improvements, please open an issue or create a pull request.
-
-## Additional Notes
-1. Please be aware that training time may vary depending on the dataset size and the number of epochs used for training.
-2. The average training time in my case was <7 hours
-3. Currently working on train.py file
-
-## Credits
-1. @ github.com/rohan-paul
-2. ChatGPT 

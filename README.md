@@ -30,7 +30,7 @@ To begin using this project, follow these steps:
 
    ```bash
    git clone https://github.com/rajeeell/AdaptiveBERT.git
-Install the required dependencies:
+2. Install the required dependencies:
       ```bash
       pip install transformers tensorflow pandas scikit-learn
       ```

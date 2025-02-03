@@ -31,8 +31,9 @@ To begin using this project, follow these steps:
    ```bash
    git clone https://github.com/rajeeell/AdaptiveBERT.git
 Install the required dependencies:
-
-pip install transformers tensorflow pandas scikit-learn
+   ```bash
+   pip install transformers tensorflow pandas scikit-learn
+   ```
 
 ## Data Preprocessing
 Before using the model, ensure your dataset is preprocessed. If you are working with a custom dataset, follow these steps:  
